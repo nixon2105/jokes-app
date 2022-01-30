@@ -79,7 +79,7 @@ body {
   position: relative;
   z-index: 5;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
   color: #ffffff;
   bottom: -7px;
   left: 20px;
@@ -91,10 +91,10 @@ body {
   position: relative;
   z-index: 5;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
   color: #919191;
   bottom: -7px;
-  left: 48px;
+  left: 57px;
   cursor: pointer;
   transition: color 0.3s ease 0s;
 }
@@ -118,4 +118,30 @@ body {
   background-color: #4eaae0;
   transition: all 0.4s ease 0s;
   border-radius: 28px;
+}
+
+.jokes__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.jokes__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+  border: none;
+  border-radius: 13px;
+  color: #fff;
+  background: #14c8f178;
+  cursor: pointer;
 }
