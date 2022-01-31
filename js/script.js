@@ -15,7 +15,7 @@ const showQutes = (data) => {
   const randomQutes = data[randomData];
   return (jokesText.innerHTML = `
   <div class="text">${randomQutes.quote}</div>
-  <div class="author">${randomQutes.author}</div>
+  <div class="author">"${randomQutes.author}"</div>
 `);
 };
 
