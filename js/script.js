@@ -1,4 +1,6 @@
 const url = 'https://www.breakingbadapi.com/api/quotes';
+const urlRu =
+  'https://raw.githubusercontent.com/rolling-scopes-school/file-storage/random-jokes/quotes.json';
 const btn = document.querySelector('.btn');
 const container = document.querySelector('.container__jokes');
 const jokesText = document.querySelector('.jokes__text');

@@ -46,79 +46,69 @@ body {
 
 .switch {
   display: flex;
-  display: flex;
+  padding: 20px;
   justify-content: flex-end;
-  padding-top: 20px;
 }
-.switch__wrapper {
+
+input[type='checkbox'] {
+  opacity: 0;
+}
+.switch label {
   position: relative;
+
   display: inline-block;
-  width: 130px;
+  width: 125px;
   height: 40px;
-  background: #f9f9f9;
-  border: 1px solid #ebebeb;
-  box-sizing: border-box;
-  border-radius: 28px;
-  margin: 0px 1em 0px 0px;
-}
-.switch__wrapper input {
-  display: none;
-}
-.switch__wrapper input:checked + .switch__slider:before {
-  transform: translateX(60px);
-}
-.switch__wrapper input:checked ~ div:after {
-  color: #ffffff;
-  transition: color 0.3s ease 0s;
-}
-.switch__wrapper input:checked ~ div:before {
-  color: #919191;
-  transition: color 0.3s ease 0s;
-}
-.switch div::before {
-  content: 'EN';
-  position: relative;
-  z-index: 5;
-  font-weight: 700;
-  font-size: 18px;
-  color: #ffffff;
-  bottom: -7px;
-  left: 20px;
+
+  background: rgb(78 170 224 / 70%);
+  border-radius: 40px;
   cursor: pointer;
-  transition: color 0.3s ease 0s;
+  transition: all 0.3s ease-out;
 }
-.switch div::after {
-  content: 'RU';
-  position: relative;
-  z-index: 5;
-  font-weight: 700;
-  font-size: 18px;
-  color: #919191;
-  bottom: -7px;
-  left: 57px;
-  cursor: pointer;
-  transition: color 0.3s ease 0s;
-}
-.switch__slider {
+
+.switch label:before {
+  content: 'English';
   position: absolute;
-  cursor: pointer;
+  right: 15px;
+
+  display: inline-block;
+
+  line-height: 40px;
+  color: #f9f9f9;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+}
+
+.switch label:after {
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  transition: 0.4s;
-  border-radius: 34px;
-}
-.switch__slider::before {
-  position: absolute;
-  content: '';
-  width: 70px;
+
+  display: inline-block;
+  width: 40px;
   height: 40px;
-  left: -1px;
-  bottom: -1px;
-  background-color: #4eaae0;
-  transition: all 0.4s ease 0s;
-  border-radius: 28px;
+
+  background: #fff;
+  border-radius: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
+#switch:checked ~ label {
+  background: rgb(78 170 224 / 70%);
+}
+
+#switch:checked ~ label:after {
+  left: calc(100% - 30px);
+}
+
+#switch:checked ~ label:before {
+  content: 'Russian';
+  right: auto;
+  left: 15px;
+
+  color: #f9f9f9;
 }
 
 .jokes__text {
