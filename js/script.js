@@ -4,8 +4,8 @@ const urlRu =
 const btn = document.querySelector('.btn');
 const container = document.querySelector('.container__jokes');
 const jokesText = document.querySelector('.jokes__text');
-const switchLang = document.querySelector('.switch');
-isChangeLang = false;
+const btnEN = document.querySelector('.btn__en');
+const btnRU = document.querySelector('.btn__ru');
 
 const getQuotes = async (url) => {
   const response = await fetch(url);
@@ -19,23 +19,15 @@ const showQutes = (data) => {
   const randomQutes = data[randomData];
   const { quote, author } = randomQutes;
   return (jokesText.innerHTML = `
-  <div class="text">${quote}</div>
-  <div class="author">"${author}"</div>
-`);
-};
-
-const handlerClick = () => {
-  switchLang.addEventListener('change', (e) => {
-    if (e.target.checked) {
-      isChangeLang = true;
-    } else {
-      isChangeLang = false;
-    }
-  });
+    <div class="text">${quote}</div>
+    <div class="author">"${author}"</div>
+  `);
 };
 
 btn.addEventListener('click', (e) => {
-  if (e.target) {
+  if (e.target && btnEN.classList.contains('active')) {
     getQuotes(url);
+  } else if (e.target && btnRU.classList.contains('active')) {
+    getQuotes(urlRu);
   }
 });

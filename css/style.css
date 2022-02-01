@@ -44,71 +44,26 @@ body {
   background-color: rgb(24 35 47 / 90%);
 }
 
-.switch {
+.language-container {
   display: flex;
-  padding: 20px;
   justify-content: flex-end;
+  padding: 20px;
 }
-
-input[type='checkbox'] {
-  opacity: 0;
-}
-.switch label {
-  position: relative;
-
-  display: inline-block;
-  width: 125px;
-  height: 40px;
-
-  background: rgb(78 170 224 / 70%);
-  border-radius: 40px;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-
-.switch label:before {
-  content: 'English';
-  position: absolute;
-  right: 15px;
-
-  display: inline-block;
-
-  line-height: 40px;
-  color: #f9f9f9;
-  text-transform: uppercase;
-  transition: all 0.3s ease-out;
-}
-
-.switch label:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: inline-block;
+.btn-language {
+  border: none;
   width: 40px;
   height: 40px;
-
-  background: #fff;
-  border-radius: 5px;
-  border-radius: 50%;
-  transition: all 0.3s ease-out;
-}
-
-#switch:checked ~ label {
+  cursor: pointer;
+  border-radius: 10px;
   background: rgb(78 170 224 / 70%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
 }
 
-#switch:checked ~ label:after {
-  left: calc(100% - 30px);
-}
-
-#switch:checked ~ label:before {
-  content: 'Russian';
-  right: auto;
-  left: 15px;
-
-  color: #f9f9f9;
+.active {
+  background: #fff;
+  color: #000;
 }
 
 .jokes__text {
