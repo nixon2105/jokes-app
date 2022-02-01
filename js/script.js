@@ -6,6 +6,7 @@ const container = document.querySelector('.container__jokes');
 const jokesText = document.querySelector('.jokes__text');
 const btnEN = document.querySelector('.btn__en');
 const btnRU = document.querySelector('.btn__ru');
+const btnContainer = document.querySelector('.language-container');
 
 const getQuotes = async (url) => {
   const response = await fetch(url);
@@ -24,6 +25,13 @@ const showQutes = (data) => {
   `);
 };
 
+const addActiveBtn = (e) => {
+  btnContainer
+    .querySelectorAll('.btn-language')
+    .forEach((el) => el.classList.remove('active'));
+  e.target.classList.add('active');
+};
+
 btn.addEventListener('click', (e) => {
   if (e.target && btnEN.classList.contains('active')) {
     getQuotes(url);
@@ -31,3 +39,5 @@ btn.addEventListener('click', (e) => {
     getQuotes(urlRu);
   }
 });
+
+btnContainer.addEventListener('click', addActiveBtn);
