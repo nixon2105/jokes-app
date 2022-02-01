@@ -4,6 +4,8 @@ const urlRu =
 const btn = document.querySelector('.btn');
 const container = document.querySelector('.container__jokes');
 const jokesText = document.querySelector('.jokes__text');
+const switchLang = document.querySelector('.switch');
+isChangeLang = false;
 
 const getQuotes = async (url) => {
   const response = await fetch(url);
@@ -15,15 +17,25 @@ const getQuotes = async (url) => {
 const showQutes = (data) => {
   const randomData = Math.floor(Math.random() * data.length);
   const randomQutes = data[randomData];
-  const { quote: text, author } = randomQutes;
+  const { quote, author } = randomQutes;
   return (jokesText.innerHTML = `
-  <div class="text">${text}</div>
+  <div class="text">${quote}</div>
   <div class="author">"${author}"</div>
 `);
 };
 
+const handlerClick = () => {
+  switchLang.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      isChangeLang = true;
+    } else {
+      isChangeLang = false;
+    }
+  });
+};
+
 btn.addEventListener('click', (e) => {
   if (e.target) {
-    getQuotes(urlRu);
+    getQuotes(url);
   }
 });
