@@ -15,14 +15,15 @@ const getQuotes = async (url) => {
 const showQutes = (data) => {
   const randomData = Math.floor(Math.random() * data.length);
   const randomQutes = data[randomData];
+  const { quote: text, author } = randomQutes;
   return (jokesText.innerHTML = `
-  <div class="text">${randomQutes.quote}</div>
-  <div class="author">"${randomQutes.author}"</div>
+  <div class="text">${text}</div>
+  <div class="author">"${author}"</div>
 `);
 };
 
 btn.addEventListener('click', (e) => {
   if (e.target) {
-    getQuotes(url);
+    getQuotes(urlRu);
   }
 });
