@@ -1,5 +1,5 @@
 const url = 'https://www.breakingbadapi.com/api/quotes';
-const urlRu = 'db/db.json';
+const urlRu = './db/db.json';
 const btn = document.querySelector('.btn');
 const container = document.querySelector('.container__jokes');
 const jokesText = document.querySelector('.jokes__text');
@@ -31,6 +31,12 @@ const addActiveBtn = (e) => {
   e.target.classList.add('active');
 };
 
+const audio = new Audio();
+const playAudio = () => {
+  audio.src = './assets/audio/click.mp3';
+  audio.play();
+};
+
 btn.addEventListener('click', (e) => {
   if (e.target && btnEN.classList.contains('active')) {
     getQuotes(url);
@@ -38,5 +44,7 @@ btn.addEventListener('click', (e) => {
     getQuotes(urlRu);
   }
 });
+
+btn.addEventListener('click', playAudio);
 
 btnContainer.addEventListener('click', addActiveBtn);
