@@ -189,3 +189,24 @@ body {
   animation-delay: 7s;
   width: 35px;
 }
+
+/*media-requests*/
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin-top: 0;
+  }
+  .container__jokes {
+    width: 600px;
+    height: 300px;
+  }
+  .jokes__text {
+    margin-top: 25px;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .author {
+    font-size: 14px;
+  }
+}
