@@ -192,7 +192,7 @@ body {
 
 /*media-requests*/
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .main {
     margin-top: 0;
   }
@@ -207,6 +207,42 @@ body {
     font-size: 16px;
   }
   .author {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo__img {
+    width: 150px;
+  }
+  .container__jokes {
+    width: 400px;
+    height: 250px;
+  }
+
+  .jokes__text {
+    margin-top: 0px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+  .author {
+    font-size: 12px;
+  }
+  .jokes__btn {
+    left: 30%;
+  }
+  .btn {
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .btn-language {
+    margin-right: 5px;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
     font-size: 14px;
   }
 }
