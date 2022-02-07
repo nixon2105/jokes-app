@@ -211,7 +211,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
   .logo__img {
     width: 150px;
   }
@@ -244,5 +244,14 @@ body {
     height: 34px;
     border-radius: 8px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container__jokes {
+    width: 290px;
+  }
+  .jokes__btn {
+    left: 22%;
   }
 }
